@@ -1,8 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>food</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
 {% for i in place_nums %}
-              <div class="col-4 grid-item p-0 m-1">
-                <div class="grid-item-img">
-                  <img src="https://picsum.photos/id/684/280/200" alt="">
-                </div>
-                <label for="">餐廳{{ i }}</label>
-              </div>
+    <div class="col-4 grid-item p-0 m-1">
+        <div class="grid-item-img">
+            <img src="https://picsum.photos/id/684/280/200" alt="">
+        </div>
+        <label for="">餐廳{{ i }}</label>
+    </div>
 {% endfor %}
+</body>
+
+</html>
