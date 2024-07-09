@@ -1,6 +1,5 @@
 from django.contrib import admin
+from .models import Place, Photo
 
-# Register your models here.
-from .models import Place
-
-admin.site.register(Place)
+admin.site.register(Place, admin.ModelAdmin)  # 商店資訊
+admin.site.register(Photo, admin.ModelAdmin)  # 商店照片

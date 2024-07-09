@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from .models import Place
+from .models import Place, Photo
 
-# Create your views here.
 def index(request):
-    return render(request, 'food/index.html', {'store_list': Place.objects.all(), })
+    photo = Photo.objects.first()
+    place = Place.objects.all()
+    return render(
+        request,
+        'food/index.html',
+        {
+            'store_list': place, 
+            'photo': photo.file
+        }
+    )

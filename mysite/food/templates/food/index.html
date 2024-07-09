@@ -34,7 +34,7 @@
             {% for store in store_list %}
             <div class="col-4 grid-item p-0 m-1">
                 <div class="grid-item-img">
-                    <img src="https://picsum.photos/id/684/280/200" alt="">
+                    <img style="max-width:280px" src="{{ photo.url }}" alt="">
                 </div>
                 <label for="">{{ store.name }}</label>
             </div>
