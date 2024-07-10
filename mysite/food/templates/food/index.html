@@ -32,11 +32,13 @@
         <!-- 餐廳列表 -->
         <div class="row">
             {% for store in store_list %}
-            <div class="col-4 grid-item p-0 m-1">
-                <div class="grid-item-img">
-                    <img style="max-width:280px" src="{{ photo.url }}" alt="">
-                </div>
-                <label for="">{{ store.name }}</label>
+            <div class="col-4 grid-item p-0 m-1 text-center">
+                <a href="/food/{{ store.id }}">
+                    <div class="grid-item-img">
+                        <img style="max-width:280px" src="{{ photo.url }}" alt="{{ store.name }}">
+                    </div>
+                    <label for="">{{ store.name }}</label>
+                </a>
             </div>
             {% endfor %}
         </div>
