@@ -30,7 +30,13 @@
                             <strong>網站：</strong>{{ website }}<br>
                             <strong>介紹：</strong>{{ introduction }}
                         </p>
-                        <a href="/" class="btn btn-primary">返回餐廳列表</a>
+                        <div>
+                            <strong>標籤：</strong>
+                            {% for tag in tags %}
+                                <span class="badge bg-primary">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        <a href="/" class="btn btn-primary mt-2">返回餐廳列表</a>
                     </div>
                 </div>
             </div>
