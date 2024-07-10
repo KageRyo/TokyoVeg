@@ -31,13 +31,13 @@
 
         <!-- 餐廳列表 -->
         <div class="row">
-            {% for store in store_list %}
+            {% for item in store_list %}
             <div class="col-4 grid-item p-0 m-1 text-center">
-                <a href="/food/{{ store.id }}">
+                <a href="/food/{{ item.place.id }}">
                     <div class="grid-item-img">
-                        <img style="max-width:280px" src="{{ photo.url }}" alt="{{ store.name }}">
+                        <img style="max-width:280px" src="{{ item.photo.url }}" alt="{{ item.place.name }}">
                     </div>
-                    <label for="">{{ store.name }}</label>
+                    <label for="">{{ item.place.name }}</label>
                 </a>
             </div>
             {% endfor %}

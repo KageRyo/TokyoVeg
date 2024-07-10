@@ -14,3 +14,4 @@ class Place(models.Model):
 class Photo(models.Model):
     name = models.CharField(max_length=255)
     file = models.ImageField(upload_to='photos')
+    place = models.ForeignKey(Place, help_text='商店名稱', on_delete=models.SET_NULL, null=True)

@@ -19,7 +19,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="card mb-4 text-center">
-                    <img src="{{ photo.url }}" class="card-img-top mx-auto" alt="{{ store.name }}" style="width: 400px;">
+                    {% for photo in photo_list %}
+                        <img src="{{ photo.file.url }}" class="card-img-top mx-auto" alt="{{ store.name }}" style="width: 400px;">
+                    {% endfor %}
                     <div class="card-body">
                         <h5 class="card-title">{{ store.name }}</h5>
                         <p class="card-text">
