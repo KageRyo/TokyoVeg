@@ -41,6 +41,8 @@ def index(request):
 def place_introduction(request, place_id: int):
     place = Place.objects.get(id=place_id)
     photo_list = place.photo_set.all()
+    tags = place.tags.all()
+    devices = place.devices.all()
     return render(
         request,
         'food/place_introduction.html',
@@ -51,6 +53,8 @@ def place_introduction(request, place_id: int):
             'address': place.address,
             'website': place.website,
             'phone_number': place.phone_number,
-            'introduction': place.introduction
+            'introduction': place.introduction,
+            'tags': tags,
+            'devices': devices
         }
     )
