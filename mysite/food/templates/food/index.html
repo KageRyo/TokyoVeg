@@ -18,7 +18,11 @@
       <div class="col-md-4 grid-item p-2 text-center">
         <a href="/food/{{ item.place.id }}">
           <div class="grid-item-img">
-            <img style="max-width:100%" src="{{ item.photo.url }}" alt="{{ item.place.name }}" />
+            {% if item.photo %}
+              <img style="max-width:100%" src="{{ item.photo.url }}" alt="{{ item.place.name }}" />
+            {% else %}
+              <img style="max-width:100%" src="/static/images/placeholder.png" alt="No image available" />
+            {% endif %}
           </div>
           <label for="">{{ item.place.name }}</label>
         </a>
