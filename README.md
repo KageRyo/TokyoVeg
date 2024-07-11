@@ -1,11 +1,11 @@
 # Tokyo Veg - A Guide to Vegetarian Restaurants in Tokyo
 
-Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的資訊。 [demo](https://kageryo.pythonanywhere.com/)  
+Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的資訊。 [[demo]](https://kageryo.pythonanywhere.com/)  
 用戶可以瀏覽、搜尋和透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 提出加入新的素食餐廳。  
 
 ## 專案簡介
 
-此專案使用 Django 3.2 開發，並儲存在 `food` 應用中。專案主要功能包括：
+此專案使用 Django 3.2 開發，並儲存在 `food` app 中。專案主要功能包括：
 - 瀏覽和搜尋素食餐廳
 - 提交新餐廳資訊
 
@@ -27,7 +27,7 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
     source tokyo_veg_venv/bin/activate
     ```
 
-3. **安裝依賴項：**
+3. **安裝函式庫：**
 
     ```bash
     pip install -r requirements.txt
@@ -42,7 +42,7 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
     DEBUG=True（若您希望在正式環境中執行請勿開啟 DEBUG 以維護安全性）
     ```
 
-5. **遷移數據庫：**
+5. **遷移資料庫：**
 
     ```bash
     python manage.py migrate
@@ -70,7 +70,7 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
 
 ### 提交 Pull Requests
 
-1. Fork 此專案庫。
+1. Fork 此專案。
 2. 建立新的分支（`git checkout -b feature/YourFeature`）。
 3. 提交您的修改（`git commit -m 'Add some feature'`）。
 4. 將修改推送至分支（`git push origin feature/YourFeature`）。
