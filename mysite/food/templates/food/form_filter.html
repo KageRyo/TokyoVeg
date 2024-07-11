@@ -1,0 +1,34 @@
+<h5>選擇標籤類型</h5>
+<form action="/food" method="get">
+  <div class="mb-3">
+    <label for="dietType" class="form-label">飲食類型</label>
+    <div id="dietType" class="form-check">
+      <input type="checkbox" class="form-check-input" id="vegan" value="vegan" />
+      <label class="form-check-label" for="vegan">全素</label><br />
+      <input type="checkbox" class="form-check-input" id="five-spicy" value="five-spicy" />
+      <label class="form-check-label" for="five-spicy">五辛素</label><br />
+      <input type="checkbox" class="form-check-input" id="egg-veg" value="egg-veg" />
+      <label class="form-check-label" for="egg-veg">蛋素</label><br />
+      <input type="checkbox" class="form-check-input" id="milk-veg" value="milk-veg" />
+      <label class="form-check-label" for="milk-veg">奶素</label><br />
+      <input type="checkbox" class="form-check-input" id="non-veg" value="non-veg" />
+      <label class="form-check-label" for="non-veg">葷素共食</label>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="paymentType" class="form-label">支付方式</label>
+    <div id="paymentType" class="form-check">
+      <input type="checkbox" class="form-check-input" id="cash" value="cash" />
+      <label class="form-check-label" for="cash">現金</label><br />
+      <input type="checkbox" class="form-check-input" id="credit-card" value="credit-card" />
+      <label class="form-check-label" for="credit-card">信用卡</label><br />
+      <input type="checkbox" class="form-check-input" id="mobile-pay" value="mobile-pay" />
+      <label class="form-check-label" for="mobile-pay">行動支付</label><br />
+      <input type="checkbox" class="form-check-input" id="contactless-pay" value="contactless-pay" />
+      <label class="form-check-label" for="contactless-pay">感應支付</label><br />
+      <input type="checkbox" class="form-check-input" id="ic-card" value="ic-card" />
+      <label class="form-check-label" for="ic-card">IC卡</label>
+    </div>
+  </div>
+  <button class="btn btn-outline-success" type="submit">搜尋</button>
+</form>
