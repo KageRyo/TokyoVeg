@@ -33,6 +33,11 @@
                             {% for tag in tags %}
                             <span class="badge bg-primary">{{ tag.name }}</span>  <!-- 顯示標籤名稱 -->
                             {% endfor %}
+                            <br>
+                            <strong>付款方式：</strong>
+                            {% for device in devices %}
+                            <span class="badge bg-primary">{{ device.name }}</span>  <!-- 顯示標籤名稱 -->
+                            {% endfor %}
                         </div>
                         <a href="/" class="btn btn-primary mt-2">返回餐廳列表</a>
                     </div>
