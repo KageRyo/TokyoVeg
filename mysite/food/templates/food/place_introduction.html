@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ store.name }} - 東京素食</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 引入 Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1 class="text-center my-4">{{ store.name }}</h1>
+      <h1 class="text-center my-4">{{ store.name }}</h1>
 
-        <!-- 商店資訊 -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card mb-4 text-center">
-                    {% for photo in photo_list %}
-                        <img src="{{ photo.file.url }}" class="card-img-top mx-auto" alt="{{ store.name }}" style="width: 400px;">
-                    {% endfor %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ store.name }}</h5>
-                        <p class="card-text">
-                            <strong>地址：</strong>{{ address }}<br>
-                            <strong>電話：</strong>{{ phone_number }}<br>
-                            <strong>網站：</strong>{{ website }}<br>
-                            <strong>介紹：</strong>{{ introduction }}
-                        </p>
-                        <div>
-                            <strong>標籤：</strong>
-                            {% for tag in tags %}
-                                <span class="badge bg-primary">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                        <a href="/" class="btn btn-primary mt-2">返回餐廳列表</a>
-                    </div>
-                </div>
+      <!-- 商店資訊 -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4 text-center">
+            {% for photo in photo_list %}
+              <img src="{{ photo.file.url }}" class="card-img-top mx-auto" alt="{{ store.name }}" style="width: 400px;" />
+            {% endfor %}
+            <div class="card-body">
+              <h5 class="card-title">{{ store.name }}</h5>
+              <p class="card-text">
+                <strong>地址：</strong>{{ address }}<br />
+                <strong>電話：</strong>{{ phone_number }}<br />
+                <strong>網站：</strong>{{ website }}<br />
+                <strong>介紹：</strong>{{ introduction }}
+              </p>
+              <div>
+                <strong>標籤：</strong>
+                {% for tag in tags %}
+                  <span class="badge bg-primary">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              <a href="/" class="btn btn-primary mt-2">返回餐廳列表</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- 引入 JS -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
 </html>
