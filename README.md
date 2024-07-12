@@ -80,6 +80,10 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
 
 如有任何問題，歡迎像我聯絡：[kageryo@coderyo.com](mailto:kageryo@codeyo.com)
 
+## Reference
+- [台南不需要米其林 TNFood](https://github.com/yen900611/TNFood/)
+- [Heroku取消免費 試試PythonAnyWhere吧 | Django架站](https://www.hashimotodraw.com/article/5)
+
 ---
 
 感謝您對 Tokyo Veg 的支持與貢獻！
