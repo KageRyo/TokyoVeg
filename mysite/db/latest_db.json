@@ -1,0 +1,748 @@
+[
+{
+  "model": "food.tag",
+  "pk": 1,
+  "fields": {
+    "name": "全素"
+  }
+},
+{
+  "model": "food.tag",
+  "pk": 2,
+  "fields": {
+    "name": "五辛素"
+  }
+},
+{
+  "model": "food.tag",
+  "pk": 3,
+  "fields": {
+    "name": "蛋素"
+  }
+},
+{
+  "model": "food.tag",
+  "pk": 4,
+  "fields": {
+    "name": "奶素"
+  }
+},
+{
+  "model": "food.tag",
+  "pk": 5,
+  "fields": {
+    "name": "葷素共食"
+  }
+},
+{
+  "model": "food.tag",
+  "pk": 6,
+  "fields": {
+    "name": "只賣素食"
+  }
+},
+{
+  "model": "food.device",
+  "pk": 1,
+  "fields": {
+    "name": "現金"
+  }
+},
+{
+  "model": "food.device",
+  "pk": 2,
+  "fields": {
+    "name": "信用卡"
+  }
+},
+{
+  "model": "food.device",
+  "pk": 3,
+  "fields": {
+    "name": "行動支付"
+  }
+},
+{
+  "model": "food.device",
+  "pk": 4,
+  "fields": {
+    "name": "感應支付"
+  }
+},
+{
+  "model": "food.device",
+  "pk": 5,
+  "fields": {
+    "name": "IC卡"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 1,
+  "fields": {
+    "name": "九州じゃんがら 秋葉原本店",
+    "address": "日本〒101-0021 Tokyo, Chiyoda City, Sotokanda, 3 Chom",
+    "pub_date": "2024-07-09T08:59:00Z",
+    "phone_number": "+81332514059",
+    "website": "https://kyushujangara.co.jp/shops/akihabara/",
+    "introduction": "位在秋葉原的拉麵店，店面不大座位稍顯擁擠，但十分美味，素食友善店家，提供VEGAN或全素品相。可以使用刷卡或IC卡等多元方式付款。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 2,
+  "fields": {
+    "name": "SHAKE SHACK 東京國際論壇店",
+    "address": "日本〒100-0005 Tokyo, Chiyoda City, Marunouchi, 3 Cho",
+    "pub_date": "2024-07-10T02:43:00Z",
+    "phone_number": "+81362734071",
+    "website": "https://shakeshack.jp/locations/tokyo-int/",
+    "introduction": "Shake Shack （シェイクシャック 東京国際フォーラム）號稱紐約最好吃的漢堡，在日本也是非常受歡迎，有提供美味的 VEGAN 漢堡可以供蔬食者享用。店內設有自助點餐機及提供多元結帳方式。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 3,
+  "fields": {
+    "name": "真さか MASAKA 居酒屋",
+    "address": "日本〒150-0042 Tokyo, Shibuya City, Udagawacho, 15−1",
+    "pub_date": "2024-07-11T06:16:00Z",
+    "phone_number": "+81354223020",
+    "website": "https://www.instagram.com/vegan_izakaya_masaka/",
+    "introduction": "在居酒屋用餐不是葷食者專屬的，快來看看這間在渋谷PARCO百貨美食街的素食居酒屋吧！全店都是 VEGAN 可食的餐點，全素者可能要注意部分餐點是否含五辛。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 4,
+  "fields": {
+    "name": "2foods 銀座ロフト店",
+    "address": "日本〒104-0061 Tokyo, Chuo City, Ginza, 2 Chome−4−6 ベ",
+    "pub_date": "2024-07-11T07:53:00Z",
+    "phone_number": "+81335286811",
+    "website": "https://2foods.jp/store/558498283678",
+    "introduction": "位在銀座VELVIA一樓的素食店家，有販售如漢堡及咖哩飯等，同時也有供應美味可口的甜點。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 5,
+  "fields": {
+    "name": "アインソフ ギンザ 銀座本店",
+    "address": "4 Chome-12-1 Ginza, Chuo City, Tokyo 104-0061日本",
+    "pub_date": "2024-07-11T07:58:00Z",
+    "phone_number": "+81362284241",
+    "website": "https://ain-soph.jp/ginza",
+    "introduction": "AIN SOPH. GINZA 提供多種蔬食餐點，若不吃五辛者也能選擇去五辛的餐點，也有無咖啡因咖啡和甜點可以選擇。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 6,
+  "fields": {
+    "name": "そらのいろNIPPON",
+    "address": "日本〒100-0005 Tokyo, Chiyoda City, Marunouchi, 1 Cho",
+    "pub_date": "2024-07-11T08:15:00Z",
+    "phone_number": "+81332117555",
+    "website": "http://soranoiro-vege.com/",
+    "introduction": "空之色拉麵位在旅客必經的東京車站，位於東京站一番街的B1拉麵街中，有提供 Vegan 可食的拉麵口味"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 7,
+  "fields": {
+    "name": "カレーハウス CoCo壱番屋 秋葉原",
+    "address": "日本〒101-0027 Tokyo, Chiyoda City, Kanda Hirakawacho",
+    "pub_date": "2024-07-11T08:46:00Z",
+    "phone_number": "+81338510006",
+    "website": "https://tenpo.ichibanya.co.jp/map/1560/",
+    "introduction": "沒錯，臺灣也有的 CoCo Ichibanya 咖哩飯在日本也有供應素食，且是標榜動物性原料完全不使用的全素咖哩飯。是連鎖店，在許多地點都有門市。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 8,
+  "fields": {
+    "name": "こまきしょくどう 鎌倉 不識庵",
+    "address": "CHABARA, 8-2 Kanda Neribeicho, Chiyoda City, Tokyo",
+    "pub_date": "2024-07-11T08:51:00Z",
+    "phone_number": "+81355775358",
+    "website": "https://www.kamakura-komaki.com/",
+    "introduction": "位在秋葉原的素食日式精實料理，全店無五辛奶蛋，全素者可以放心享用。"
+  }
+},
+{
+  "model": "food.place",
+  "pk": 9,
+  "fields": {
+    "name": "KOMEDA is □ 東銀座店",
+    "address": "1 Chome-13-1 Tsukiji, Chuo City, Tokyo 104-0045日本",
+    "pub_date": "2024-07-11T09:12:00Z",
+    "phone_number": "+81362606369",
+    "website": "https://www.komeda-is.com/",
+    "introduction": "供應純素鬆餅、漢堡和義大利麵料理的餐廳，另提供水果酒，裝潢採環保時尚風格。"
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 1,
+  "fields": {
+    "name": "九州じゃんがら 秋葉原本店",
+    "file": "photos/Kyushu_Jangara_Akihabara.jpg",
+    "place": 1
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 2,
+  "fields": {
+    "name": "SHAKE SHACK 東京國際論壇店",
+    "file": "photos/Shake_Shack.jpg",
+    "place": 2
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 4,
+  "fields": {
+    "name": "真さか MASAKA 居酒屋",
+    "file": "photos/vegan_izakaya_masaka.jpg",
+    "place": 3
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 5,
+  "fields": {
+    "name": "2foods",
+    "file": "photos/2foods.jpg",
+    "place": 4
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 6,
+  "fields": {
+    "name": "アインソフ ギンザ 銀座本店",
+    "file": "photos/AINSOPH.jpg",
+    "place": 5
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 7,
+  "fields": {
+    "name": "そらのいろNIPPON",
+    "file": "photos/NIPPON.jpg",
+    "place": 6
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 8,
+  "fields": {
+    "name": "カレーハウス CoCo壱番屋 秋葉原",
+    "file": "photos/CoCo.png",
+    "place": 7
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 9,
+  "fields": {
+    "name": "こまきしょくどう 鎌倉 不識庵",
+    "file": "photos/Komaki_Shokudo_Kamakura_Fushikian.jpg",
+    "place": 8
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 10,
+  "fields": {
+    "name": "KOMEDA is □ 東銀座店",
+    "file": "photos/KOMEDA_is.jpg",
+    "place": 9
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 1,
+  "fields": {
+    "place": 1,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 2,
+  "fields": {
+    "place": 1,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 3,
+  "fields": {
+    "place": 1,
+    "tags": 3
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 4,
+  "fields": {
+    "place": 1,
+    "tags": 5
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 5,
+  "fields": {
+    "place": 2,
+    "tags": 4
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 6,
+  "fields": {
+    "place": 2,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 7,
+  "fields": {
+    "place": 2,
+    "tags": 5
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 8,
+  "fields": {
+    "place": 3,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 9,
+  "fields": {
+    "place": 3,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 10,
+  "fields": {
+    "place": 3,
+    "tags": 6
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 11,
+  "fields": {
+    "place": 4,
+    "tags": 6
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 12,
+  "fields": {
+    "place": 4,
+    "tags": 4
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 13,
+  "fields": {
+    "place": 4,
+    "tags": 3
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 14,
+  "fields": {
+    "place": 4,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 15,
+  "fields": {
+    "place": 4,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 16,
+  "fields": {
+    "place": 5,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 17,
+  "fields": {
+    "place": 5,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 18,
+  "fields": {
+    "place": 5,
+    "tags": 6
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 19,
+  "fields": {
+    "place": 6,
+    "tags": 5
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 20,
+  "fields": {
+    "place": 6,
+    "tags": 2
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 21,
+  "fields": {
+    "place": 6,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 22,
+  "fields": {
+    "place": 7,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 23,
+  "fields": {
+    "place": 7,
+    "tags": 5
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 24,
+  "fields": {
+    "place": 8,
+    "tags": 6
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 25,
+  "fields": {
+    "place": 8,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 26,
+  "fields": {
+    "place": 9,
+    "tags": 6
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 27,
+  "fields": {
+    "place": 9,
+    "tags": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 1,
+  "fields": {
+    "place": 1,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 2,
+  "fields": {
+    "place": 1,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 3,
+  "fields": {
+    "place": 1,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 4,
+  "fields": {
+    "place": 2,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 5,
+  "fields": {
+    "place": 2,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 6,
+  "fields": {
+    "place": 2,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 7,
+  "fields": {
+    "place": 2,
+    "devices": 4
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 8,
+  "fields": {
+    "place": 2,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 9,
+  "fields": {
+    "place": 3,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 10,
+  "fields": {
+    "place": 3,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 11,
+  "fields": {
+    "place": 4,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 12,
+  "fields": {
+    "place": 4,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 13,
+  "fields": {
+    "place": 4,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 14,
+  "fields": {
+    "place": 4,
+    "devices": 4
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 15,
+  "fields": {
+    "place": 4,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 16,
+  "fields": {
+    "place": 5,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 17,
+  "fields": {
+    "place": 5,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 18,
+  "fields": {
+    "place": 5,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 19,
+  "fields": {
+    "place": 5,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 20,
+  "fields": {
+    "place": 6,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 21,
+  "fields": {
+    "place": 6,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 22,
+  "fields": {
+    "place": 7,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 23,
+  "fields": {
+    "place": 7,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 24,
+  "fields": {
+    "place": 7,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 25,
+  "fields": {
+    "place": 7,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 26,
+  "fields": {
+    "place": 8,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 27,
+  "fields": {
+    "place": 8,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 28,
+  "fields": {
+    "place": 8,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 29,
+  "fields": {
+    "place": 9,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 30,
+  "fields": {
+    "place": 9,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 31,
+  "fields": {
+    "place": 9,
+    "devices": 5
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 32,
+  "fields": {
+    "place": 9,
+    "devices": 4
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 34,
+  "fields": {
+    "place": 9,
+    "devices": 2
+  }
+}
+]
