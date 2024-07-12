@@ -5,9 +5,8 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
 
 ## 專案簡介
 
-此專案使用 Django 3.2 開發，並儲存在 `food` app 中。專案主要功能包括：
-- 瀏覽和搜尋素食餐廳
-- 提交新餐廳資訊
+此專案使用 Django 3.2 開發，並儲存在 `food` app 中。
+![image](https://github.com/user-attachments/assets/e240cdd1-ec8c-4386-800b-69f1de56d57d)
 
 ## 安裝與設定
 
@@ -80,7 +79,7 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
 
 如有任何問題，歡迎像我聯絡：[kageryo@coderyo.com](mailto:kageryo@codeyo.com)
 
-## Reference
+### Reference
 - [台南不需要米其林 TNFood](https://github.com/yen900611/TNFood/)
 - [Heroku取消免費 試試PythonAnyWhere吧 | Django架站](https://www.hashimotodraw.com/article/5)
 
