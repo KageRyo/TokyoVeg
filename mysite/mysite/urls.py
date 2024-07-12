@@ -18,11 +18,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path
 from food.views import index
+from food.api import api
 
 urlpatterns = \
     [
         path('admin/', admin.site.urls),
         path('food/', include('food.urls')),
+        path('api/', api.urls),
         path('', index)
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
