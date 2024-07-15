@@ -43,7 +43,7 @@ def get_devices(request):
     devices = Device.objects.all()
     return devices
 
-# GET：取得所有店家，支持根據不同參數進行篩選
+# GET：取得所有店家
 @api.get("places", response=List[PlaceSchema])
 def get_places(request, food_style: Optional[int] = None, payment_type: Optional[int] = None):
     # 初始化篩選字典
