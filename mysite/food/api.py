@@ -5,48 +5,60 @@ from .models import Place, Photo, Tag, Device
 
 api = NinjaAPI()
 
-class TagsSchema(Schema):
+# 定義標籤的Schema
+class TagSchema(Schema):
     name: str
     
-class DevicesSchema(Schema):
+# 定義設備的Schema
+class DeviceSchema(Schema):
     name: str
     
+# 定義照片的Schema
 class PhotoSchema(Schema):
     name: str = "照片"
     path: str = '/'
-    
+
+# 定義店家的Schema
 class PlaceSchema(Schema):
     id: int = 1
     name: str = "店家"
     address: str = "地址"
     phone_number: str = "電話"
-    photo: Optional[List[PhotoSchema]]
+    photos: Optional[List[PhotoSchema]]
     website: str = "https://example.com"
     introduction: str = "店家資訊"
     pub_date: datetime.datetime
-    tags: List[TagsSchema]
-    devices: List[DevicesSchema]
+    tags: List[TagSchema]
+    devices: List[DeviceSchema]
 
-@api.get("tags", response=List[TagsSchema])
-def tags(request):
-    tag = Tag.objects.all()
-    return tag
+# GET：取得所有標籤
+@api.get("tags", response=List[TagSchema])
+def get_tags(request):
+    tags = Tag.objects.all()
+    return tags
 
-@api.get("devices", response=List[DevicesSchema])
-def devices(request):
-    device = Device.objects.all()
-    return device
+# GET：取得所有設備
+@api.get("devices", response=List[DeviceSchema])
+def get_devices(request):
+    devices = Device.objects.all()
+    return devices
 
+# GET：取得所有店家
 @api.get("places", response=List[PlaceSchema])
-def places(request, tags: str = None):
-    if tags:
-        places = Place.objects.prefetch_related('photo_set', 'tags').filter(tags__name=tags)
+def get_places(request, tag_name: str = None):
+    # 以標籤篩選取得店家
+    if tag_name:
+        places = Place.objects.prefetch_related('photo_set', 'tags').filter(tags__name=tag_name)
     else:
         places = Place.objects.prefetch_related('photo_set', 'tags').all()
-    result = [PlaceSchema(
-        **place.__dict__,
-        tags=[TagsSchema(name=t.name) for t in place.tags.all()],
-        photo=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],
-        devices=[DevicesSchema(name=d.name) for d in place.devices.all()]
-    ) for place in places]
+        
+    result = [
+        PlaceSchema(
+            **place.__dict__,   # 將 place 的所有屬性以關鍵字參數方式傳遞給 PlaceSchema
+            tags=[TagSchema(name=tag.name) for tag in place.tags.all()],    # 與篩選項目符合的標籤
+            photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],  # 對應的照片
+            devices=[DeviceSchema(name=device.name) for device in place.devices.all()]  # 對應的設備標籤
+        )
+        for place in places     # 列表生成式
+    ]
     return result
