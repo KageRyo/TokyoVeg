@@ -75,3 +75,8 @@ def get_place(request, id, int = 1):
     )
     return result
     
+# POST：新增標籤資料
+@api.post("tags")
+def post_tag(request, pay_load: TagSchema):
+    tags = Tag.objects.create(**pay_load.dict())
+    return {"id": tags.id}
