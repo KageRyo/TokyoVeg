@@ -20,13 +20,13 @@ class PhotoSchema(Schema):
 
 # 定義店家的Schema
 class PlaceSchema(Schema):
-    id: int = 1
-    name: str = "店家"
-    address: str = "地址"
-    phone_number: str = "電話"
+    id: int
+    name: str
+    address: str
+    phone_number: str
     photos: Optional[List[PhotoSchema]]
-    website: str = "https://example.com"
-    introduction: str = "店家資訊"
+    website: str
+    introduction: str
     pub_date: datetime.datetime
     tags: List[TagSchema]
     devices: List[DeviceSchema]
@@ -43,40 +43,62 @@ def get_devices(request):
     devices = Device.objects.all()
     return devices
 
-# GET：取得所有店家
+# GET：取得所有店家，支持根據不同參數進行篩選
 @api.get("places", response=List[PlaceSchema])
-def get_places(request, tag_name: str = None):
-    # 以標籤篩選取得店家
-    if tag_name:
-        places = Place.objects.prefetch_related('photo_set', 'tags').filter(tags__name=tag_name)
-    else:
-        places = Place.objects.prefetch_related('photo_set', 'tags').all()
+def get_places(request, food_style: Optional[int] = None, payment_type: Optional[int] = None):
+    # 初始化篩選字典
+    filters = {}
+    
+    # 根據 food_style 參數篩選
+    if food_style is not None:
+        filters['tags__id'] = food_style
         
+    # 根據 payment_type 參數篩選
+    if payment_type is not None:
+        filters['devices__id'] = payment_type
+
+    # 根據篩選條件取得店家
+    places = Place.objects.filter(**filters).prefetch_related('photo_set', 'tags', 'devices')
+    
+    # 格式化回傳結果
     result = [
         PlaceSchema(
-            **place.__dict__,   # 將 place 的所有屬性以關鍵字參數方式傳遞給 PlaceSchema
-            tags=[TagSchema(name=tag.name) for tag in place.tags.all()],    # 與篩選項目符合的標籤
-            photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],  # 對應的照片
-            devices=[DeviceSchema(name=device.name) for device in place.devices.all()]  # 對應的設備標籤
+            id=place.id,
+            name=place.name,
+            address=place.address,
+            phone_number=place.phone_number,
+            photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],
+            website=place.website,
+            introduction=place.introduction,
+            pub_date=place.pub_date,
+            tags=[TagSchema(name=tag.name) for tag in place.tags.all()],
+            devices=[DeviceSchema(name=device.name) for device in place.devices.all()]
         )
-        for place in places     # 列表生成式
+        for place in places
     ]
+    
     return result
 
 # GET：取得特定店家
 @api.get("place", response=PlaceSchema)
-def get_place(request, id, int = 1):
-    place = Place.objects.prefetch_related('photo_set', 'tags').get(id=id)
+def get_place(request, id: int):
+    place = Place.objects.prefetch_related('photo_set', 'tags', 'devices').get(id=id)
     result = PlaceSchema(
-        **place.__dict__,
-        tags=[TagSchema(name=tag.name) for tag in place.tags.all()],    # 與篩選項目符合的標籤
-        photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],  # 對應的照片
-        devices=[DeviceSchema(name=device.name) for device in place.devices.all()]  # 對應的設備標籤
+        id=place.id,
+        name=place.name,
+        address=place.address,
+        phone_number=place.phone_number,
+        photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],
+        website=place.website,
+        introduction=place.introduction,
+        pub_date=place.pub_date,
+        tags=[TagSchema(name=tag.name) for tag in place.tags.all()],
+        devices=[DeviceSchema(name=device.name) for device in place.devices.all()]
     )
     return result
     
 # POST：新增標籤資料
 @api.post("tags")
 def post_tag(request, pay_load: TagSchema):
-    tags = Tag.objects.create(**pay_load.dict())
-    return {"id": tags.id}
+    tag = Tag.objects.create(**pay_load.dict())
+    return {"id": tag.id}

@@ -1,9 +1,7 @@
 {% extends 'food/base.html' %}
-
 {% block title %}
   東京素食餐廳列表
 {% endblock %}
-
 {% block heading %}
   東京素食餐廳列表
 {% endblock %}
@@ -13,20 +11,81 @@
 {% endblock %}
 
 {% block content %}
-  <div class="row">
-    {% for item in store_list %}
-      <div class="col-md-4 grid-item p-2 text-center">
-        <a href="/food/{{ item.place.id }}">
-          <div class="grid-item-img">
-            {% if item.photo %}
-              <img style="max-width:100%" src="{{ item.photo.url }}" alt="{{ item.place.name }}" />
-            {% else %}
-              <img style="max-width:100%" src="/static/images/placeholder.png" alt="No image available" />
-            {% endif %}
-          </div>
-          <label for="">{{ item.place.name }}</label>
-        </a>
-      </div>
-    {% endfor %}
+  <div id="debug-info" style="display: none;"></div>
+  <div id="store-list" class="row">
+    <!-- 透過下面的 JavaScript 來載入商店 -->
   </div>
+{% endblock %}
+
+{% block custom_script %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 當頁面載入完成後，執行 fetchPlaces 函數以載入商店列表
+      fetchPlaces()
+      // 監聽表單的提交事件，當提交表單時，攔截默認行為，改為執行 fetchPlaces 函數以載入篩選後的商店列表
+      document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault()
+        fetchPlaces(new FormData(this))
+      })
+    })
+    
+    function fetchPlaces(formData) {
+      // 初始化 API URL
+      let url = '/api/places'
+      // 如果提供了 formData，則將其轉換為查詢參數並附加到 URL 後面
+      if (formData) {
+        const params = new URLSearchParams(formData)
+        url += '?' + params.toString()
+      }
+    
+      // 發送 GET 請求到 API 以獲取商店資料
+      fetch(url)
+        .then((response) => {
+          // 檢查回應是否成功，若否則拋出錯誤
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText)
+          }
+          // 將回應轉換為 JSON 格式
+          return response.json()
+        })
+        .then((data) => {
+          // 取得存放商店列表的容器
+          const storeList = document.getElementById('store-list')
+          // 清空現有的內容
+          storeList.innerHTML = ''
+          // 遍歷回應的資料，並動態建立商店的 HTML 元素
+          data.forEach((item) => {
+            const col = document.createElement('div')
+            col.className = 'col-md-4 grid-item p-2 text-center'
+    
+            const link = document.createElement('a')
+            link.href = `/food/${item.id}`
+    
+            const imgContainer = document.createElement('div')
+            imgContainer.className = 'grid-item-img'
+    
+            const img = document.createElement('img')
+            // 如果商店有照片，則使用第一張照片，否則使用預設佔位圖
+            img.src = item.photos && item.photos.length > 0 ? item.photos[0].path : '/static/images/placeholder.png'
+            img.alt = item.name
+            img.style.maxWidth = '100%'
+    
+            imgContainer.appendChild(img)
+            link.appendChild(imgContainer)
+    
+            const name = document.createElement('div')
+            name.textContent = item.name
+    
+            col.appendChild(link)
+            col.appendChild(name)
+            storeList.appendChild(col)
+          })
+        })
+        .catch((error) => {
+          // 如果發生錯誤，則在控制台打印錯誤訊息並在頁面上顯示錯誤訊息
+          console.error('Error:', error)
+          document.getElementById('store-list').innerHTML = '<p>Error loading stores: ' + error.message + '</p>'
+        })
+    }
+  </script>
 {% endblock %}
