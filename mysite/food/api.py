@@ -12,20 +12,25 @@ class BasicAuth(HttpBasicAuth):
     def authenticate(self, request, username, password):
         user = authenticate(username = username, password = password)
 
-# 定義標籤的Schema
+# 定義瀏覽人數的 Schema
+class VisitSchema(Schema):
+    today: int
+    total: int
+
+# 定義標籤的 Schema
 class TagSchema(Schema):
     name: str
     
-# 定義設備的Schema
+# 定義設備的 Schema
 class DeviceSchema(Schema):
     name: str
     
-# 定義照片的Schema
+# 定義照片的 Schema
 class PhotoSchema(Schema):
     name: str = "照片"
     path: str = '/'
 
-# 定義店家的Schema
+# 定義店家的 Schema
 class PlaceSchema(Schema):
     id: int
     name: str
@@ -37,6 +42,16 @@ class PlaceSchema(Schema):
     pub_date: datetime.datetime
     tags: List[TagSchema]
     devices: List[DeviceSchema]
+
+# GET：計算瀏覽人數
+@api.get("visits", response=VisitSchema)
+def get_visits(request):
+    visits = request.session.get('visits', 0)
+    request.session['visits'] = visits + 1
+    return VisitSchema(
+        today = visits,
+        total = visits
+    )
 
 # GET：取得所有標籤
 @api.get("tags", response=List[TagSchema])
