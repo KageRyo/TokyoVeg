@@ -1,9 +1,16 @@
 import datetime
 from typing import List, Optional
+from django.contrib.auth import authenticate
 from ninja import NinjaAPI, Schema
+from ninja.security import django_auth, HttpBearer, HttpBasicAuth
 from .models import Place, Photo, Tag, Device
 
 api = NinjaAPI()
+
+# 設定 API 權限帳號
+class BasicAuth(HttpBasicAuth):
+    def authenticate(self, request, username, password):
+        user = authenticate(username = username, password = password)
 
 # 定義標籤的Schema
 class TagSchema(Schema):
@@ -98,7 +105,7 @@ def get_place(request, id: int):
     return result
     
 # POST：新增標籤資料
-@api.post("tags")
+@api.post("tags", auth=BasicAuth())
 def post_tag(request, pay_load: TagSchema):
     tag = Tag.objects.create(**pay_load.dict())
     return {"id": tag.id}
