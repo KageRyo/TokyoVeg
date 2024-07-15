@@ -62,3 +62,16 @@ def get_places(request, tag_name: str = None):
         for place in places     # 列表生成式
     ]
     return result
+
+# GET：取得特定店家
+@api.get("place", response=PlaceSchema)
+def get_place(request, id, int = 1):
+    place = Place.objects.prefetch_related('photo_set', 'tags').get(id=id)
+    result = PlaceSchema(
+        **place.__dict__,
+        tags=[TagSchema(name=tag.name) for tag in place.tags.all()],    # 與篩選項目符合的標籤
+        photos=[PhotoSchema(name=photo.name, path=photo.file.url) for photo in place.photo_set.all()],  # 對應的照片
+        devices=[DeviceSchema(name=device.name) for device in place.devices.all()]  # 對應的設備標籤
+    )
+    return result
+    
