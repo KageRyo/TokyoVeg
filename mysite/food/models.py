@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms import ValidationError
+from django_resized import ResizedImageField
 
 # 標籤
 class Tag(models.Model):
@@ -32,15 +33,15 @@ class Place(models.Model):
 # 限制照片上傳大小
 def validateFileSize(value):
     fileSize = value.size
-    if fileSize > 10240:
-        raise ValidationError("The Maxium File Size That Can be Uploaded is 10KB!")
+    if fileSize > 102400:
+        raise ValidationError("The Maxium File Size That Can be Uploaded is 100KB!")
     else:
         return value
 
 # 照片
 class Photo(models.Model):
     name = models.CharField(max_length=255)
-    file = models.ImageField(upload_to='photos', validators=[validateFileSize])
+    file = ResizedImageField(size=[400, 400], crop=['middle', 'center'], force_format='PNG', upload_to='photos', validators=[validateFileSize])
     place = models.ForeignKey(Place, help_text='商店名稱', on_delete=models.SET_NULL, null=True)
     
 # 標籤與店家關聯

@@ -12,7 +12,6 @@ class PlaceAdmin(admin.ModelAdmin):
     list_filter = ('pub_date', 'tags')
     search_fields = ('name', 'address', 'website')
     ordering = ('-id',)
-    readonly_fields = ('pub_date',)
     inlines = [TagInlineAdmin, DeviceInlineAdmin]
 
 admin.site.register(Place, PlaceAdmin)                      # 商店資訊
