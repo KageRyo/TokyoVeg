@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ValidationError
 
 # 標籤
 class Tag(models.Model):
@@ -28,10 +29,18 @@ class Place(models.Model):
     def __str__(self):
         return self.name
     
+# 限制照片上傳大小
+def validateFileSize(value):
+    fileSize = value.size
+    if fileSize > 10240:
+        raise ValidationError("The Maxium File Size That Can be Uploaded is 10KB!")
+    else:
+        return value
+
 # 照片
 class Photo(models.Model):
     name = models.CharField(max_length=255)
-    file = models.ImageField(upload_to='photos')
+    file = models.ImageField(upload_to='photos', validators=[validateFileSize])
     place = models.ForeignKey(Place, help_text='商店名稱', on_delete=models.SET_NULL, null=True)
     
 # 標籤與店家關聯
