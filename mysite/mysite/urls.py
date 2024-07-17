@@ -25,5 +25,6 @@ urlpatterns = \
         path('admin/', admin.site.urls),
         path('food/', include('food.urls')),
         path('api/', api.urls),
+        path('silk/', include('silk.urls', namespace='silk')),
         path('', index)
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
