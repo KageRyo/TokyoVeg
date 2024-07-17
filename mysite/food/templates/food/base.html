@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="google-site-verification" content="koKNYCdEwMO3bweHUhBiX-Ukotjf_MLiPL-kIySEc5s" />
     <meta name="description" content="因為飲食習慣不同打消出國旅行的計畫嗎？別擔心，東京其實也有很多你想不到的素食選擇！" />
+    {% load static %}
+    <link rel="icon" href="{% static 'food/img/favicon.ico' %}" type="image/x-icon" />
     {% block structred_data %}
       <script>
         {
@@ -35,7 +37,7 @@
     <div class="container">
       <h1 class="text-center my-4">
         {% block heading %}
-
+          
         {% endblock %}
       </h1>
 
