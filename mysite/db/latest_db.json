@@ -185,6 +185,18 @@
   }
 },
 {
+  "model": "food.place",
+  "pk": 10,
+  "fields": {
+    "name": "まるごとVeganダイニング浅草",
+    "address": "1 Chome-3-13 Hanakawado, Taito City, Tokyo 111-003",
+    "pub_date": "2024-07-16T07:17:00Z",
+    "phone_number": "+81358308134",
+    "website": "http://dining.marugotovegan.com/",
+    "introduction": "まるごとVeganダイニング浅草（Marugoto Vegan Dining Asakusa）位在地下鐵淺草站河畔旁，提供純素無五辛的日式料理。"
+  }
+},
+{
   "model": "food.photo",
   "pk": 1,
   "fields": {
@@ -263,6 +275,15 @@
     "name": "KOMEDA is □ 東銀座店",
     "file": "photos/KOMEDA_is.jpg",
     "place": 9
+  }
+},
+{
+  "model": "food.photo",
+  "pk": 11,
+  "fields": {
+    "name": "まるごとVeganダイニング浅草",
+    "file": "photos/淺草VEGAN.png",
+    "place": 10
   }
 },
 {
@@ -479,6 +500,22 @@
   "fields": {
     "place": 9,
     "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 28,
+  "fields": {
+    "place": 10,
+    "tags": 1
+  }
+},
+{
+  "model": "food.tag_management",
+  "pk": 29,
+  "fields": {
+    "place": 10,
+    "tags": 6
   }
 },
 {
@@ -743,6 +780,46 @@
   "fields": {
     "place": 9,
     "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 35,
+  "fields": {
+    "place": 10,
+    "devices": 1
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 36,
+  "fields": {
+    "place": 10,
+    "devices": 2
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 37,
+  "fields": {
+    "place": 10,
+    "devices": 3
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 38,
+  "fields": {
+    "place": 10,
+    "devices": 4
+  }
+},
+{
+  "model": "food.device_management",
+  "pk": 39,
+  "fields": {
+    "place": 10,
+    "devices": 5
   }
 }
 ]
