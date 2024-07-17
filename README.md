@@ -1,7 +1,19 @@
 # Tokyo Veg - A Guide to Vegetarian Restaurants in Tokyo
 
-Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的資訊。 [[demo]](https://kageryo.pythonanywhere.com/)  
-用戶可以瀏覽、搜尋和透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 提出加入新的素食餐廳。  
+<table>
+<tr>
+<td width="60%">
+
+Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的資訊。 [[demo]](https://kageryo.pythonanywhere.com/)
+
+用戶可以瀏覽、搜尋和透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 提出加入新的素食餐廳。
+
+</td>
+<td width="40%">
+<img src="https://github.com/user-attachments/assets/c6381bb3-1b8e-4e5f-aaa2-549c5ea06340" alt="TokyoVeg" width="250">
+</td>
+</tr>
+</table>
 
 ## 專案簡介
 
