@@ -41,7 +41,7 @@ def validateFileSize(value):
 # 照片
 class Photo(models.Model):
     name = models.CharField(max_length=255)
-    file = ResizedImageField(size=[400, 400], crop=['middle', 'center'], force_format='PNG', upload_to='photos', validators=[validateFileSize])
+    file = ResizedImageField(size=[250, 250], crop=['middle', 'center'], force_format='PNG', upload_to='photos', validators=[validateFileSize])
     place = models.ForeignKey(Place, help_text='商店名稱', on_delete=models.SET_NULL, null=True)
     
 # 標籤與店家關聯
