@@ -39,6 +39,7 @@ Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的�
     ```plaintext
     SECRET_KEY=your-secret-key-here
     DEBUG=True（若您希望在正式環境中執行請勿開啟 DEBUG 以維護安全性）
+    SENTRY_CLIENT_DSN = 'Your Sentry Key'
     ```
 
 5. **遷移資料庫：**
