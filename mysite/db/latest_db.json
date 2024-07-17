@@ -198,91 +198,91 @@
 },
 {
   "model": "food.photo",
-  "pk": 1,
+  "pk": 12,
   "fields": {
     "name": "九州じゃんがら 秋葉原本店",
-    "file": "photos/Kyushu_Jangara_Akihabara.jpg",
+    "file": "photos/Kyushu_Jangara_Akihabara.png",
     "place": 1
   }
 },
 {
   "model": "food.photo",
-  "pk": 2,
+  "pk": 13,
   "fields": {
     "name": "SHAKE SHACK 東京國際論壇店",
-    "file": "photos/Shake_Shack.jpg",
+    "file": "photos/Shake_Shack.png",
     "place": 2
   }
 },
 {
   "model": "food.photo",
-  "pk": 4,
+  "pk": 14,
   "fields": {
     "name": "真さか MASAKA 居酒屋",
-    "file": "photos/vegan_izakaya_masaka.jpg",
+    "file": "photos/vegan_izakaya_masaka.png",
     "place": 3
   }
 },
 {
   "model": "food.photo",
-  "pk": 5,
+  "pk": 15,
   "fields": {
-    "name": "2foods",
-    "file": "photos/2foods.jpg",
+    "name": "2foods 銀座ロフト店",
+    "file": "photos/2foods.png",
     "place": 4
   }
 },
 {
   "model": "food.photo",
-  "pk": 6,
+  "pk": 16,
   "fields": {
-    "name": "アインソフ ギンザ 銀座本店",
-    "file": "photos/AINSOPH.jpg",
+    "name": "AIN SOPH 銀座本店",
+    "file": "photos/AINSOPH.png",
     "place": 5
   }
 },
 {
   "model": "food.photo",
-  "pk": 7,
+  "pk": 17,
   "fields": {
     "name": "そらのいろNIPPON",
-    "file": "photos/NIPPON.jpg",
+    "file": "photos/NIPPON.png",
     "place": 6
   }
 },
 {
   "model": "food.photo",
-  "pk": 8,
+  "pk": 18,
   "fields": {
     "name": "カレーハウス CoCo壱番屋 秋葉原",
-    "file": "photos/CoCo.png",
+    "file": "photos/coco_akihabara.png",
     "place": 7
   }
 },
 {
   "model": "food.photo",
-  "pk": 9,
+  "pk": 19,
   "fields": {
     "name": "こまきしょくどう 鎌倉 不識庵",
-    "file": "photos/Komaki_Shokudo_Kamakura_Fushikian.jpg",
+    "file": "photos/Komaki_Shokudo_Kamakura_Fushikian.png",
     "place": 8
   }
 },
 {
   "model": "food.photo",
-  "pk": 10,
+  "pk": 20,
   "fields": {
     "name": "KOMEDA is □ 東銀座店",
-    "file": "photos/KOMEDA_is.jpg",
+    "file": "photos/KOMEDA_is.png",
     "place": 9
   }
 },
 {
   "model": "food.photo",
-  "pk": 11,
+  "pk": 21,
   "fields": {
     "name": "まるごとVeganダイニング浅草",
-    "file": "photos/淺草VEGAN.png",
+    "file": "photos/asakusa_vegan.png",
     "place": 10
   }
 },
