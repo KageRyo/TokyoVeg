@@ -33,7 +33,8 @@ else:
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'kageryo.pythonanywhere.com'
+    'kageryo.pythonanywhere.com',
+    '.ngrok-free.app'
 ]
 
 
