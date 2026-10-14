@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/c6381bb3-1b8e-4e5f-aaa2-549c5ea06340" alt="TokyoVeg" width="155">
 
 - Tokyo Veg 是一個基於 Django 的網站，旨在提供東京素食餐廳的資訊。 [[demo]](https://kageryo.pythonanywhere.com/)  
-- 用戶可以瀏覽、搜尋和透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 提出加入新的素食餐廳。  
+- 用戶可以瀏覽、搜尋和透過 [Issues](https://github.com/KageRyo/TokyoVeg/issues) 提出加入新的素食餐廳。
 
 </div>
 
@@ -20,15 +20,15 @@
 1. **Clone 專案：**
 
     ```bash
-    git clone https://github.com/kageryo/tokyo_veg.git
-    cd tokyo_veg
+    git clone https://github.com/KageRyo/TokyoVeg.git
+    cd TokyoVeg
     ```
 
 2. **建立虛擬環境並啟動：**
 
     ```bash
-    python3 -m venv tokyo_veg_venv
-    source tokyo_veg_venv/bin/activate
+    python3 -m venv tokyoveg_venv
+    source tokyoveg_venv/bin/activate
     ```
 
 3. **安裝函式庫：**
@@ -70,8 +70,8 @@
 
 ### 提出 Issues
 
-如果您有任何問題或功能請求，請透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 頁面提出。  
-我們也歡迎用戶透過 [Issues](https://github.com/kageryo/tokyo_veg/issues) 提交新的餐廳資訊，請提供盡可能詳細的餐廳資料。
+如果您有任何問題或功能請求，請透過 [Issues](https://github.com/KageRyo/TokyoVeg/issues) 頁面提出。
+我們也歡迎用戶透過 [Issues](https://github.com/KageRyo/TokyoVeg/issues) 提交新的餐廳資訊，請提供盡可能詳細的餐廳資料。
 
 ### 提交 Pull Requests
 
@@ -83,7 +83,7 @@
 
 ## 聯絡我們
 
-如有任何問題，歡迎向我聯絡：[kageryo@coderyo.com](mailto:kageryo@codeyo.com)
+如有任何問題，歡迎向我聯絡：[kageryo@coderyo.com](mailto:kageryo@coderyo.com)
 
 ### Reference
 - [台南不需要米其林 TNFood](https://github.com/yen900611/TNFood/)
